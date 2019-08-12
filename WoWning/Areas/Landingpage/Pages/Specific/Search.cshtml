@@ -1,0 +1,255 @@
+﻿@page "{handler?}"
+@inject IViewLocalizer Localizer
+@model WoWning.Areas.Landingpage.Pages.Specific.SearchModel
+
+@{
+    ViewData["Title"] = Localizer["Search Recipes"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Localizer["Search Recipes"]</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" id="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SearchItem.Server" class="control-label"></label>
+                <select asp-for="SearchItem.Server" class="form-control">
+                    <option disabled selected>@Localizer["Select an option"]</option>
+                    <option value="1">Molten Core</option>
+                    <option value="2">Winterspring</option>
+                    <option value="3">Gadzet</option>
+                    <option value="4">Kazaak</option>
+                </select>
+                <span asp-validation-for="SearchItem.Server" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchItem.Side" class="control-label"></label>
+                <select asp-for="SearchItem.Side" class="form-control">
+                    <option disabled selected>@Localizer["Select an option"]</option>
+                    <option value="1">@Localizer["Horde"]</option>
+                    <option value="2">@Localizer["Alliance"]</option>
+                </select>
+                <span asp-validation-for="SearchItem.Side" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SearchItem.Name" class="control-label"></label>
+                <input id="search" asp-for="SearchItem.Name" type="text" class="form-control" />
+                <br />
+                <select id="result" class="form-control" style="display: none;" multiple></select>
+                <span asp-validation-for="SearchItem.Name" class="text-danger"></span>
+            </div>
+            <input id="tipsort" hidden="hidden" asp-for="SearchItem.TipSort" />
+            <input id="recommendationsort" hidden="hidden" asp-for="SearchItem.RecommendationSort" />
+            <input hidden="hidden" asp-for="SearchItem.CurrentSort" />
+            <input id="pageindex" hidden="hidden" asp-for="SearchItem.PageIndex" />
+            <div class="form-group">
+                <input type="submit" value="@Localizer["Search"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@if (Model.Recipe != null)
+{
+    <hr />
+    <h4>@Localizer["Item"]</h4>
+    <div>
+        @if (Model.Recipe.ItemId == Model.Recipe.Id)
+        {
+            <a href="#" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="spell=@Model.Recipe.ItemId">hai</a>
+        }
+        else
+        {
+            <a href="#" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="item=@Model.Recipe.ItemId">hai</a>
+        }
+        @if (Model.Recipe.MaxAmount != null)
+        {
+            <p style="position: absolute; color: white !important;width: 40px;text-align: right;margin-top: calc(0px - 1.5rem);pointer-events: none;">@Model.Recipe.Amount - @Model.Recipe.MaxAmount</p>
+        }
+        else
+        {
+            <p style="position: absolute; color: white !important;width: 40px;text-align: right;margin-top: calc(0px - 1.5rem);pointer-events: none;">@Model.Recipe.Amount</p>
+        }
+    </div>
+    <br />
+    <h4>@Localizer["Materials needed"]</h4>
+    <div>
+        @foreach (var mat in Model.Recipe.RecipeMaterials)
+        {
+            <div style="padding-right: 2rem">
+                <a href="#" data-wh-icon-size="medium" style="color: black !important;" data-wowhead="item=@mat.MaterialId">hai</a>
+                <p style="position: absolute; color: white !important; width: 40px;text-align: right;margin-top: calc(0px - 1.5rem);pointer-events: none;">@mat.Amount</p>
+            </div>
+        }
+    </div>
+    <br />
+}
+@if (Model.Recipes != null)
+{
+    <h4>@Localizer["Crafters"]</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Localizer["Recommend"]</th>
+                <th class="col-md" style="max-width:30%">
+                    <a href="javascript:void(0);" onclick="tipsort()">
+                        @Localizer["Expected Tip"]
+                    </a>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Recipes[0].Character.Name)
+                </th>
+                <th>
+                    <a href="javascript:void(0);" onclick="reccsort()">
+                        @Localizer["Recommendations"]
+                    </a>
+                </th>
+                <th>
+                    @Localizer["Alternate names"]
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Recipes)
+            {
+                <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-md-3">
+                                @if (item.Character.User.CanRecommend)
+                                {
+                                    <img id="up_@item.CharacterId" src="~/img/up.png" onclick="sendUp(@item.CharacterId)" style="cursor: pointer;" />
+                                }
+                            </div>
+                            <div class="col-md-3">
+                                @if (item.Character.User.CanRecommend)
+                                {
+                                    <img id="down_@item.CharacterId" src="~/img/down.png" onclick="sendDown(@item.CharacterId);" style="cursor: pointer;" />
+                                }
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-md" style="max-width:30%">
+                        @Html.DisplayFor(modelItem => item.Gold)
+                        <img src="~/img/gold.png" />
+                        @Html.DisplayFor(modelItem => item.Silver)
+                        <img src="~/img/silver.png" />
+                        @Html.DisplayFor(modelItem => item.Copper)
+                        <img src="~/img/copper.png" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Character.Name)
+                    </td>
+                    <td>
+                        <span id="upnr_@item.CharacterId">@item.Character.User.PositiveRecommendations</span>
+                        <img src="~/img/up.png" />
+                        <span id="downnr_@item.CharacterId">@item.Character.User.NegativeRecommendations</span>
+                        <img src="~/img/down.png" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Character.User.AlternateNames)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    var prevDisabled = !Model.Recipes.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Recipes.HasNextPage ? "disabled" : "";
+
+
+    <a href="javascript:void(0);" onclick="previous()"
+       class="btn btn-default @prevDisabled">
+        @Localizer["Previous"]
+    </a>
+    <a href="javascript:void(0);" onclick="next()"
+       class="btn btn-default @nextDisabled">
+        @Localizer["Next"]
+    </a>
+}
+@section scripts{
+    <script>
+        function sendUp(id) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "Search?handler=StoreUp&id="+id, true);
+            xhttp.send();
+            document.getElementById("up_" + id).remove();
+            document.getElementById("down_" + id).remove();
+            document.getElementById("upnr_" + id).innerHTML = parseInt(document.getElementById("upnr_" + id).innerHTML)+1;
+        }
+
+        function sendDown(id) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "Search?handler=StoreDown&id="+id, true);
+            xhttp.send();
+            document.getElementById("up_" + id).remove();
+            document.getElementById("down_" + id).remove();
+            document.getElementById("downnr_" + id).innerHTML = parseInt(document.getElementById("downnr_" + id).innerHTML) + 1;
+        }
+
+        function tipsort() {
+            var x = document.getElementById('tipsort');
+            if (x.value == 'tip') {
+                x.value = 'tip_desc'
+            } else {
+                x.value = 'tip'
+            };
+            document.getElementById('form').submit();
+        }
+
+        function reccsort() {
+            var x = document.getElementById('recommendationsort');
+            if (x.value == 'recc') {
+                x.value = 'recc_desc'
+            } else {
+                x.value = 'recc'
+            };
+            document.getElementById('form').submit();
+        }
+
+        function next() {
+            var x = document.getElementById('pageindex');
+            x.value = parseInt(x.value) + 1;
+            document.getElementById('form').submit();
+        }
+
+        function previous() {
+            var x = document.getElementById('pageindex');
+            x.value = parseInt(x.value) - 1;
+            document.getElementById('form').submit();
+        }
+
+        $("#search").on("input", function () {
+            // get the value ftom input
+            var text = $(this).val();
+
+            if (text.length > 0) {
+                $.get("Search/recipelist", { text: text }, function (data) {
+
+                    $("#result").empty();
+                    //add all data
+                    for (i = 0; i < data.length; i++) {
+                        $("#result").append('<option>' + data[i] + "</option>");
+                    }
+
+                    //if hidden show the select
+                    if ($("#result").is(":hidden")) {
+                        $("#result").show();
+                    }
+                });
+            } else {
+                $("#result").empty().hide();
+            }
+        });
+
+        $(document).on("click", "#result > option", function () {
+
+            //add selected value to #search
+            $("#search").val($(this).val());
+
+            //clear and hide #result
+            $("#result").empty().hide();
+        });
+    </script>
+}

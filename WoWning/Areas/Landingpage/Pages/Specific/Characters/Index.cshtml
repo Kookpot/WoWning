@@ -1,0 +1,92 @@
+﻿@page
+@inject IViewLocalizer Localizer
+@model WoWning.Areas.Landingpage.Pages.Specific.Characters.IndexModel
+
+@{
+    ViewData["Title"] = Localizer["Index"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Localizer["Index"]</h1>
+
+<p>
+    <a asp-page="Create">@Localizer["Create New"]</a>
+</p>
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            @Localizer["Find by name:"]
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="@Localizer["Search"]" class="btn btn-default" /> |
+            <a asp-page="./Index">@Localizer["Back to full List"]</a>
+        </p>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.ServerSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Character[0].ServerName)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.SideSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Character[0].SideName)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Character[0].Name)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Character[0].Professions)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Character) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SideName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Professions)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">@Localizer["Edit"]</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">@Localizer["Details"]</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">@Localizer["Delete"]</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Character.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Character.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Character.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-default @prevDisabled">
+    @Localizer["Previous"]
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Character.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-default @nextDisabled">
+   @Localizer["Next"]
+</a>
