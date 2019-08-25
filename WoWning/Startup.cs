@@ -82,10 +82,10 @@ namespace WoWning
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
 
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            //if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
                 services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
-            else
-                services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=localdatabase.db"));
+            //else
+            //    services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=localdatabase.db"));
 
             services.AddDefaultIdentity<WoWUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
@@ -135,7 +135,9 @@ namespace WoWning
                 var supportedCultures = new List<CultureInfo>
                     {
                         new CultureInfo("en-US"),
-                        //new CultureInfo("nl-BE")
+                        new CultureInfo("fr-FR"),
+                        new CultureInfo("de-DE"),
+                        new CultureInfo("ru-RU")
                     };
 
                 options.DefaultRequestCulture = new RequestCulture("en-US");
@@ -166,7 +168,9 @@ namespace WoWning
             var supportedCultures = new[]
             {
                 new CultureInfo("en-US"),
-                //new CultureInfo("nl-BE"),
+                new CultureInfo("fr-FR"),
+                new CultureInfo("de-DE"),
+                new CultureInfo("ru-RU")
             };
 
             app.UseRequestLocalization(new RequestLocalizationOptions

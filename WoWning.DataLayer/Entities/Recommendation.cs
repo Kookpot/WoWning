@@ -7,7 +7,6 @@ namespace WoWning.DataLayer.Entities
     public class Recommendation
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string GiverId { get; set; }
         public string TakerId { get; set; }

@@ -78,7 +78,7 @@
                         <img src="~/img/copper.png" />
                     </td>
                     <td>
-                        <a href="#" data-wowhead="spell=@Model.Recipes[i].Id">hai</a>
+                        <a href="#" data-wowhead="spell=@Model.Recipes[i].Id&amp;domain=@Model.WoWHeadDomain">@Model.Recipes[i].TransName</a>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model.Recipes[i].Level)

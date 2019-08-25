@@ -60,7 +60,7 @@ namespace WoWning.Areas.Landingpage.Pages.Specific.Characters
                     .AsNoTracking()
                     .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (character == null || character.UserId == user.Id)
+            if (character == null || character.UserId != user.Id)
                 return NotFound();
 
             try

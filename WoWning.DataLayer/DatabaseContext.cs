@@ -26,6 +26,14 @@ namespace WoWning.DataLayer
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Character>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Recommendation>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Character>()
                 .HasOne(x => x.User)
                 .WithMany(x => x.Characters)
                 .HasForeignKey(x => x.UserId)

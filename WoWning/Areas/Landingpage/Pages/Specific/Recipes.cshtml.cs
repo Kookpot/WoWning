@@ -36,6 +36,20 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
+        public string WoWHeadDomain {
+            get {
+                var t = System.Threading.Thread.CurrentThread.CurrentCulture;
+                if (t.Name == "fr-FR")
+                    return "fr.classic";
+                else if (t.Name == "ru-RU")
+                    return "ru.classic";
+                else if (t.Name == "de-DE")
+                    return "de.classic";
+                else
+                    return "classic";
+            }
+        }
+
         [BindProperty]
         public List<Recipe> Recipes { get; set; } = new List<Recipe>();
 
@@ -109,8 +123,17 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
 
                     var query = _context.Recipes.AsNoTracking();
                     if (!string.IsNullOrEmpty(searchString))
-                        query = query.Where(s => s.Name.Contains(searchString));
-
+                    {
+                        var t = System.Threading.Thread.CurrentThread.CurrentCulture;
+                        if (t.Name == "fr-FR")
+                            query = query.Where(s => s.FrenchName.Contains(searchString));
+                        else if (t.Name == "ru-RU")
+                            query = query.Where(s => s.RussianName.Contains(searchString));
+                        else if (t.Name == "de-DE")
+                            query = query.Where(s => s.GermanName.Contains(searchString));
+                        else
+                            query = query.Where(s => s.Name.Contains(searchString));
+                    }
 
                     if (!string.IsNullOrEmpty(profession))
                     {
@@ -186,16 +209,31 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
                             }
                         }
 
+                        var t = System.Threading.Thread.CurrentThread.CurrentCulture;
                         switch (sortOrder)
                         {
                             case "level_desc":
                                 recipes = recipes.OrderByDescending(s => s.Level).ToList();
                                 break;
                             case "name":
-                                recipes = recipes.OrderBy(s => s.Name).ToList();
+                                if (t.Name == "fr-FR")
+                                    recipes = recipes.OrderBy(s => s.FrenchName).ToList();
+                                else if (t.Name == "de-DE")
+                                    recipes = recipes.OrderBy(s => s.GermanName).ToList();
+                                else if (t.Name == "ru-RU")
+                                    recipes = recipes.OrderBy(s => s.RussianName).ToList();
+                                else
+                                    recipes = recipes.OrderBy(s => s.Name).ToList();
                                 break;
                             case "name_desc":
-                                recipes = recipes.OrderByDescending(s => s.Name).ToList();
+                                if (t.Name == "fr-FR")
+                                    recipes = recipes.OrderByDescending(s => s.FrenchName).ToList();
+                                else if (t.Name == "ru-RU")
+                                    recipes = recipes.OrderByDescending(s => s.RussianName).ToList();
+                                else if (t.Name == "de-DE")
+                                    recipes = recipes.OrderByDescending(s => s.GermanName).ToList();
+                                else
+                                    recipes = recipes.OrderByDescending(s => s.Name).ToList();
                                 break;
                             default:
                                 recipes = recipes.OrderBy(s => s.Level).ToList();

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Home Page" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="Idea" xml:space="preserve">
+    <value>Die Idee</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>&lt;p&gt;Während WoW Classic neu gestartet wird, werden viele Leute Ausrüstung, Tränke, Verzauberungen, Essen, ... benötigen.&lt;/p&gt;&lt;p&gt;Viele dieser Dinge werden auf dem AH verfügbar sein, aber es gibt ein paar Mängel.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Die Preise von Gegenständen auf der AH sind manchmal im Vergleich zu den tatsächlichen Materialien, die für die Herstellung des Gegenstands erforderlich sind, unverschämt.&lt;/li&gt;&lt;li&gt;Der Artikel, den Sie dringend benötigen, ist möglicherweise nicht im AH aufgeführt.&lt;/li&gt;&lt;li&gt;Möglicherweise verfügen Sie über die erforderlichen Materialien für den gewünschten Artikel, aber Sie möchten vermeiden, dass Sie diese Materialien verkaufen müssen, um Geld für den Kauf des gewünschten Artikels zu erhalten.&lt;/li&gt;&lt;li&gt;Es gibt keine Pergamente, daher muss die Verzauberung immer noch durch manuelles Handeln erfolgen.&lt;/li&gt;&lt;li&gt;Die Preise für AH können sehr volatil sein und nicht alle Spieler verwenden die AH mit den besten Absichten.&lt;/li&gt;&lt;li&gt;Nichts ist besser als die persönliche Interaktion eines manuellen Handels&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Was wir also vorschlagen, ist ein System, bei dem die Leute alle Rezepte, die sie haben, zusammen mit dem Tipp bewerben, den sie erwarten, wenn sie das Rezept für jemanden zusammenstellen.&lt;/p&gt;&lt;p&gt;Durch eine einfache Suche können Sie sehen, welche Charaktere ein bestimmtes Rezept auf Ihrem Server haben und den Spieler im Spiel kontaktieren. So einfach ist das.&lt;/p&gt;&lt;h4&gt;Dinge, die wir nicht tun&lt;/h4&gt;&lt;p&gt;Wir verwenden Ihre Daten nicht, um sie an externe Dienstleister oder Parteien weiterzugeben. Ihre Daten sind in unseren eigenen Wänden gesichert.&lt;/p&gt;&lt;p&gt;Die von Ihnen eingegebenen Daten werden nur von anderen Benutzern bei der Anzeige einzelner Rezepte verwendet! Wir setzen nicht alle Ihre Rezepte gleichzeitig einem anderen Benutzer aus.&lt;/p&gt;&lt;p&gt;Wir ermöglichen Ihnen lediglich, andere Spieler auf Ihrem Server zu identifizieren. Die eigentliche Kontaktaufnahme, Verhandlung und Transaktion liegt in Ihrer Verantwortung.&lt;/p&gt;&lt;p&gt;Wenn eine Transaktion fehlschlägt, können wir von WoWning.com keine Verantwortung übernehmen. Sie können diesem Spieler jederzeit einen Daumen nach unten geben.&lt;/p&gt;&lt;h4&gt;Wie funktioniert es?&lt;/h4&gt;&lt;p&gt;Erstellen Sie zunächst ein Konto, indem Sie sich registrieren (BITTE verwenden Sie ein anderes Passwort als Ihr WoW-Passwort!) oder indem Sie sich über Facebook, Twitter, Google oder Microsoft anmelden.&lt;/p&gt;&lt;p&gt;Sobald Sie angemeldet sind, können Sie Zeichen erstellen, indem Sie im Menü "Zeichen" auf "Neu erstellen" klicken. Einige erforderliche Daten werden benötigt, um Ihre Charaktere eindeutig zu identifizieren.&lt;/p&gt;&lt;p&gt;Zu jedem Zeichen können Sie im Menü "Rezepte" bekannte Rezepte hinzufügen. Wählen Sie einfach einen Charakter und einen seiner Berufe aus, um eine Liste aller möglichen Rezepte zu laden.&lt;/p&gt;&lt;p&gt;Wählen Sie einfach ein Rezept aus, geben Sie den erwarteten Tipp ein und klicken Sie auf "Speichern", um andere Spieler für Ihr Rezept zu werben.&lt;/p&gt;&lt;p&gt;Um ein Rezept von anderen Spielern auf Ihrem Server zu finden, wählen Sie im Menü "Suchen" den Server und die Seite aus und geben Sie das gewünschte Rezept ein.&lt;/p&gt;&lt;p&gt;Bei der Suche wird eine Liste der Spieler angezeigt, denen das Rezept gehört. Außerdem werden die Namen der Alts für diesen Spieler auf diesem Server angezeigt, damit Sie einfacher versuchen können, mit dem Spieler Kontakt aufzunehmen.&lt;/p&gt;&lt;p&gt;War die Transaktion erfolgreich? Gib dem Spieler einen Daumen hoch! Geben Sie nur einen Daumen nach unten, wenn der andere Spieler versucht hat, Sie in irgendeiner Weise zu betrügen.&lt;/p&gt;&lt;p&gt;Sie können einen anderen Spieler nur einmal pro Woche empfehlen oder ablehnen!&lt;/p&gt;&lt;h4&gt;Fragen?&lt;/h4&gt;&lt;p&gt;Fragen, Fehler oder Ideen können über unsere &lt;a style = "color: #007bff;" href="./Landingpage/Main/Contact"&gt;Kontaktformular&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Herzlich willkommen</value>
+  </data>
+</root>

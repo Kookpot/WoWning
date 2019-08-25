@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Policy" xml:space="preserve">
+    <value>&lt;p&gt;Die folgenden Nutzungsbedingungen gelten für die gesamte Nutzung der WoWning.com-Website sowie für alle Inhalte, Dienste und Produkte, die über die Website verfügbar sind, einschließlich, aber nicht beschränkt auf den Kundenbereich (zusammenfassend als Site bezeichnet).&lt;/p&gt;
+&lt;p&gt;Die Website gehört und wird von tIPtec (gemeinsam als Betreiber bezeichnet) betrieben. Die Website wird vorbehaltlich Ihrer Zustimmung ohne Änderung aller hierin enthaltenen Geschäftsbedingungen und aller anderen Betriebsregeln, Richtlinien, einschließlich, jedoch nicht beschränkt auf die Datenschutzrichtlinien und -verfahren des Betreibers, die von Zeit zu Zeit auf dieser Website von der veröffentlicht werden, angeboten Betreiber (zusammen die "Vereinbarung"). Die Website wird vorbehaltlich Ihrer Zustimmung ohne Änderung aller hierin enthaltenen Geschäftsbedingungen und aller anderen Betriebsregeln, Richtlinien, einschließlich, jedoch nicht beschränkt auf die Datenschutzrichtlinien und -verfahren des Betreibers, die von Zeit zu Zeit auf dieser Website von der veröffentlicht werden, angeboten Betreiber (zusammen die "Vereinbarung").&lt;/p&gt;
+&lt;p&gt;Bitte lesen Sie diese Vereinbarung sorgfältig durch, bevor Sie auf die Website zugreifen oder sie nutzen. Durch den Zugriff auf oder die Nutzung eines Teils der Website erklären Sie sich mit den Bestimmungen und Bedingungen dieser Vereinbarung einverstanden. Wenn Sie nicht allen Bestimmungen und Bedingungen dieser Vereinbarung zustimmen, dürfen Sie nicht auf die Website zugreifen oder Dienste nutzen. Die Website steht nur Personen zur Verfügung, die mindestens 13 Jahre alt sind. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kundenbereichskonto&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sie sind verantwortlich für die Aufrechterhaltung der Sicherheit Ihres Kundenbereichskontos und Sie sind voll verantwortlich für alle Aktivitäten, die unter dem Konto stattfinden, sowie für alle anderen im Zusammenhang mit dem Konto ergriffenen Maßnahmen. Sie müssen den Betreiber unverzüglich über jede nicht autorisierte Nutzung Ihres Kontos oder sonstige Sicherheitsverletzungen informieren. Der Betreiber haftet nicht für Handlungen oder Unterlassungen von Ihnen, einschließlich Schäden jeglicher Art, die aufgrund solcher Handlungen oder Unterlassungen entstehen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Beitrag zur Website&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wenn Sie irgendwo auf der Site Kommentare hinterlassen, Material auf der Site veröffentlichen, Links auf der Site veröffentlichen oder anderweitig Material über die Site verfügbar machen (oder zulassen, dass ein Dritter es zur Verfügung stellt) (solches Material, "Inhalt"), Sie sind für den Inhalt und den daraus resultierenden Schaden vollständig verantwortlich. Dies gilt unabhängig davon, ob es sich bei dem betreffenden Inhalt um Text, Grafiken, Audio oder Computersoftware handelt. Durch die Bereitstellung von Inhalten versichern Sie, dass:&lt;ul&gt;&lt;li&gt; Das Herunterladen, Kopieren und Verwenden des Inhalts verletzt nicht die Eigentumsrechte, einschließlich, aber nicht beschränkt auf die Urheber-, Patent-, Marken- oder Geschäftsgeheimnisrechte Dritter.&lt;/li&gt;&lt;li&gt;Sie haben alle Lizenzen von Drittanbietern in Bezug auf den Inhalt vollständig eingehalten und alle erforderlichen Maßnahmen ergriffen, um die erforderlichen Bedingungen erfolgreich an die Endbenutzer weiterzuleiten.&lt;/li&gt;&lt;li&gt;Der Inhalt enthält oder installiert keine Viren, Würmer, Malware, Trojaner oder andere schädliche oder zerstörerische Inhalte.&lt;/li&gt;&lt;li&gt;Der Inhalt ist kein Spam, wird nicht maschinell oder zufällig generiert und enthält keinen unethischen oder unerwünschten kommerziellen Inhalt, der dazu bestimmt ist, den Verkehr auf Websites von Drittanbietern zu lenken oder die Suchmaschinenrangfolge von Websites von Drittanbietern zu verbessern oder zu verbessern rechtswidrige Handlungen (z. B. Phishing) oder irreführende Angaben zur Quelle des Materials (z. B. Spoofing)&lt;/li&gt;&lt;li&gt;Der Inhalt ist nicht pornografisch, verleumderisch oder diffamierend, enthält keine Drohungen oder Anreize für Gewalt gegen Einzelpersonen oder Organisationen und verletzt nicht die Datenschutz- oder Publizitätsrechte Dritter.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Durch die Übermittlung von Inhalten an den Betreiber zur Aufnahme in unsere Website gewähren Sie dem Betreiber eine weltweite, lizenzgebührenfreie und nicht ausschließliche Lizenz zur Reproduktion, Änderung, Anpassung und Veröffentlichung des Inhalts zum Zwecke der Anzeige und Verbreitung , Werbung, Marketing oder sonstige rechtmäßige Verwendung.&lt;/p&gt;
+&lt;p&gt;Ohne diese Zusicherungen oder Garantien einzuschränken, hat der Betreiber das Recht (jedoch nicht die Verpflichtung), nach eigenem Ermessen des Betreibers (i) Inhalte abzulehnen oder zu entfernen, die nach vernünftiger Auffassung des Betreibers gegen eine Richtlinie verstoßen oder in irgendeiner Weise schädlich oder anstößig ist oder (ii) nach alleinigem Ermessen des Betreibers den Zugang zu und die Nutzung der Website für Einzelpersonen oder Unternehmen aus irgendeinem Grund beendet oder verweigert. Der Betreiber ist nicht verpflichtet, zuvor unter diesen Umständen gezahlte Beträge zurückzuerstatten.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Welche Informationen sammeln wir?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wir können auf verschiedene Weise personenbezogene Daten von Ihnen erfassen, unter anderem über Online-Formulare zum Bestellen von Produkten und Dienstleistungen sowie in anderen Fällen, in denen Sie aufgefordert werden, solche Daten freiwillig zur Verfügung zu stellen, einschließlich, aber nicht beschränkt auf, wenn Sie sich bei registrieren Sie können unsere Website besuchen, eine Bestellung aufgeben oder unseren Newsletter abonnieren. Bei der Bestellung oder Registrierung auf unserer Website werden Sie möglicherweise aufgefordert, Folgendes einzugeben: Name, E-Mail-Adresse, Postanschrift, Telefonnummer oder Kreditkarteninformationen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wofür verwenden wir Ihre Informationen?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Alle Informationen, die wir von Ihnen sammeln, können verwendet werden, um Ihre Erfahrung zu personalisieren, unsere Website zu verbessern, den Kundenservice zu verbessern, Transaktionen zu verarbeiten und regelmäßig E-Mails zu senden. Die von Ihnen für die Bestellabwicklung angegebene E-Mail-Adresse wird nur dazu verwendet, Ihnen Informationen und Aktualisierungen zu Ihrer Bestellung zuzusenden. Wenn Sie sich für unsere Mailingliste entscheiden, erhalten Sie E-Mails, die Unternehmensnachrichten, Aktualisierungen, verwandte Produkt- oder Serviceinformationen usw. enthalten. Wenn Sie den Erhalt zukünftiger E-Mails jederzeit abbestellen möchten, erhalten Sie detaillierte Informationen zum Abbestellen Anweisungen finden Sie unten in jeder E-Mail.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wie schützen wir Ihre Daten?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wir ergreifen verschiedene Sicherheitsmaßnahmen, um die Sicherheit Ihrer persönlichen Daten zu gewährleisten, wenn Sie eine Bestellung aufgeben oder auf Ihre persönlichen Daten zugreifen.&lt;/p&gt;
+&lt;p&gt;Wir bieten die Verwendung eines sicheren Servers an. Alle bereitgestellten vertraulichen / Kreditinformationen werden über die Secure Socket Layer (SSL) -Technologie übertragen und dann in die Datenbank unseres Zahlungsgateway-Anbieters verschlüsselt, damit nur diejenigen darauf zugreifen können, die über besondere Zugriffsrechte für solche Systeme verfügen, und müssen die Informationen vertraulich behandeln. Nach einer Transaktion werden Ihre privaten Daten (Kreditkarten, Sozialversicherungsnummern, Finanzdaten usw.) nicht auf unseren Servern gespeichert.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zahlungen und Rückerstattungen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Die Site bietet Produkte und Dienstleistungen zum Verkauf an. Die Website wickelt Zahlungen für diese Produkte nicht direkt ab, sondern leitet diese Zahlungen an einen sicheren Drittanbieter weiter, der alle Aspekte des Zahlungsprozesses abwickelt. Alle Zahlungsprobleme oder -streitigkeiten sollten direkt mit dem Zahlungsabwickler geklärt werden. Sobald wir vom Zahlungsverarbeiter benachrichtigt wurden, dass eine Zahlung geleistet wurde und die Zahlung eine Betrugsprüfung erfolgreich bestanden hat, wird der Zugang zu dem Produkt oder der Dienstleistung, die gekauft werden, so bald wie möglich gewährt. Wir übernehmen jedoch keine Garantie dafür Aktualität oder Unmittelbarkeit. Kostenlose Konten haben nur eingeschränkten Zugriff auf die Website, sodass der Benutzer alle verfügbaren Dienste testen kann, bevor er eine Zahlung vornimmt, und feststellen kann, ob die angebotenen Dienste den Anforderungen des Benutzers entsprechen. Sie können eine Rückerstattung innerhalb von 7 Tagen nach der Zahlung nur anfordern, wenn Ihr Browser kein Javascript unterstützt und Sie nicht in der Lage sind, unseren Richtliniengenerator zu verwenden. Andernfalls werden keine Rückerstattungen angeboten. Beachten Sie, dass unser System den Namen Ihres Browsers, die Version und die Javascript-Unterstützung protokolliert, damit wir jede Anfrage auf Legitimität überprüfen können.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verantwortung der Website-Besucher&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Durch den Betrieb der Website versichert oder impliziert der Betreiber nicht, dass er einen Teil oder den gesamten bereitgestellten Inhalt billigt oder dass er der Ansicht ist, dass dieses Material korrekt, nützlich oder nicht schädlich ist. Sie sind dafür verantwortlich, die erforderlichen Vorkehrungen zu treffen, um sich und Ihre Computersysteme vor Viren, Würmern, Trojanern und anderen schädlichen oder zerstörerischen Inhalten zu schützen. Die Website kann Inhalte enthalten, die anstößig, unanständig oder auf andere Weise zu beanstanden sind, sowie Inhalte, die technische Ungenauigkeiten, typografische Fehler und andere Fehler enthalten. Der Betreiber lehnt jegliche Verantwortung für Schäden ab, die durch die Nutzung der Website durch Besucher entstehen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Geben wir Informationen an Dritte weiter?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Wir verkaufen, handeln oder geben Ihre personenbezogenen Daten nicht an Dritte weiter, außer um von Ihnen angeforderte Produkte oder Dienstleistungen bereitzustellen. Dies gilt nicht für vertrauenswürdige Dritte, die uns beim Betreiben unserer Website, bei der Führung unseres Geschäfts oder bei der Betreuung von Ihnen unterstützen, sofern diese Parteien damit einverstanden sind, diese Informationen vertraulich zu behandeln. Wir können Ihre Daten auch dann freigeben, wenn wir der Meinung sind, dass die Freigabe zur Einhaltung der Gesetze, zur Durchsetzung unserer Website-Richtlinien oder zum Schutz unserer oder anderer Rechte, Eigentums- oder Sicherheitsrechte angemessen ist. Nicht persönlich identifizierbare Besucherinformationen können jedoch anderen Parteien für Marketing, Werbung oder andere Zwecke zur Verfügung gestellt werden.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Urheberrechtsverletzung und DMCA-Richtlinien &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Da der Betreiber andere auffordert, seine Rechte an geistigem Eigentum zu respektieren, respektiert er die Rechte an geistigem Eigentum anderer. Wenn Sie der Meinung sind, dass auf der Website befindliches oder mit der Website verlinktes Material gegen Ihr Urheberrecht verstößt, werden Sie aufgefordert, den Betreiber gemäß den allgemeinen DMCA-Richtlinien zu benachrichtigen. Der Betreiber reagiert auf alle derartigen Mitteilungen, auch wenn dies erforderlich oder angemessen ist, indem er das rechtsverletzende Material entfernt oder alle Links zu dem rechtsverletzenden Material deaktiviert. Im Falle eines Besuchers, der möglicherweise Urheberrechte oder andere geistige Eigentumsrechte des Betreibers oder anderer verletzt oder wiederholt verletzt, kann der Betreiber nach eigenem Ermessen den Zugang zu und die Nutzung der Website sperren oder verweigern. Im Falle einer solchen Kündigung ist der Betreiber nicht verpflichtet, dem Betreiber bereits gezahlte Beträge zurückzuerstatten. Sie stimmen ferner zu, keine urheberrechtlich geschützten Hinweise auf Materialien zu ändern oder zu löschen, die von der Website heruntergeladen wurden. Sie müssen unseren Urheberrechtshinweis in der von Ihnen erstellten Richtlinie beibehalten, es sei denn, Sie haben eine Premium-Richtlinie gekauft. In diesem Fall können Sie unseren Urheberrechtshinweis aus Ihrer generierten Richtlinie entfernen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verwenden wir Cookies?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ja, wir verwenden Cookies (kleine Informationen, die Ihr Browser auf der Festplatte Ihres Computers speichert), damit wir die Artikel in Ihrem Warenkorb speichern und verarbeiten, Ihre Einstellungen für zukünftige Besuche verstehen und speichern und aggregierte Daten zusammenstellen können Informationen zum Site-Verkehr und zur Site-Interaktion, damit wir in Zukunft bessere Site-Erfahrungen und -Tools anbieten können. Wir können Verträge mit Drittanbietern abschließen, um das Verständnis unserer Website-Besucher zu verbessern. Diesen Dienstanbietern ist es nicht gestattet, die in unserem Namen gesammelten Informationen zu verwenden, außer um uns bei der Führung und Verbesserung unseres Geschäfts zu unterstützen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links von Drittanbietern&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Unsere Website enthält möglicherweise Links zu Websites Dritter. Für diese Websites von Drittanbietern gelten separate und unabhängige Nutzungsbedingungen und Datenschutzrichtlinien. Wir übernehmen daher keine Verantwortung oder Haftung für den Inhalt und die Aktivitäten dieser verlinkten Seiten. Wir sind jedoch bemüht, die Integrität unserer Website zu schützen, und freuen uns über jegliches Feedback zu diesen Websites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Geistiges Eigentum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Diese Vereinbarung überträgt vom Betreiber kein geistiges Eigentum des Betreibers oder eines Dritten auf Sie, und alle Rechte, Titel und Interessen an diesem Eigentum (wie zwischen den Parteien) verbleiben ausschließlich beim Betreiber. Das Betreiberlogo und alle anderen Marken, Dienstleistungsmarken, Grafiken und Logos, die in Verbindung mit dem Betreiber oder der Website verwendet werden, sind Marken oder eingetragene Marken des Betreibers oder der Lizenzgeber des Betreibers. Andere Marken, Dienstleistungsmarken, Grafiken und Logos, die im Zusammenhang mit der Website verwendet werden, können Marken anderer Dritter sein. Ihre Nutzung der Website gewährt Ihnen kein Recht oder keine Lizenz zur Reproduktion oder anderweitigen Nutzung der Marken des Betreibers oder Dritter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Änderungen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Der Betreiber behält sich das Recht vor, nach eigenem Ermessen einen Teil dieser Vereinbarung zu ändern oder zu ersetzen. Es liegt in Ihrer Verantwortung, diese Vereinbarung regelmäßig auf Änderungen zu überprüfen. Ihre fortgesetzte Nutzung oder Ihr Zugriff auf die Website nach der Veröffentlichung von Änderungen dieser Vereinbarung gilt als Annahme dieser Änderungen. Der Betreiber kann in Zukunft auch neue Dienste und/oder Funktionen über die Website anbieten (einschließlich der Freigabe neuer Tools und Ressourcen). Für diese neuen Funktionen und/oder Dienste gelten die Bestimmungen dieser Vereinbarung.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kündigung&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Der Betreiber kann Ihren Zugriff auf die gesamte Website oder einen Teil davon jederzeit mit oder ohne Grund mit oder ohne Vorankündigung mit sofortiger Wirkung kündigen. Wenn Sie diesen Vertrag kündigen möchten, können Sie die Nutzung der Website einfach einstellen. Ungeachtet des Vorstehenden kann ein solches Konto, wenn Sie über ein Kundenkonto verfügen, vom Betreiber nur aufgelöst werden, wenn Sie gegen diese Vereinbarung erheblich verstoßen und diesen Verstoß nicht innerhalb von 14 (vierzehn) Tagen nach der Mitteilung des Betreibers an Sie heilen. vorausgesetzt, der Betreiber kann die Site im Rahmen einer allgemeinen Außerbetriebnahme unseres Dienstes sofort kündigen. Alle Bestimmungen dieser Vereinbarung, die ihrer Natur nach die Kündigung überleben sollten, gelten auch über die Kündigung hinaus, einschließlich, jedoch nicht beschränkt auf Eigentumsbestimmungen, Gewährleistungsausschlüsse, Freistellung und Haftungsbeschränkungen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gewährleistungsausschluss &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Die Site wird "wie besehen" bereitgestellt. Der Betreiber und seine Zulieferer und Lizenzgeber lehnen hiermit jegliche ausdrückliche oder stillschweigende Gewährleistung ab, einschließlich, ohne Einschränkung, der Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung. Weder der Betreiber noch seine Zulieferer und Lizenzgeber übernehmen eine Garantie dafür, dass die Website fehlerfrei ist oder dass der Zugriff auf die Website kontinuierlich oder ununterbrochen erfolgt. Sie verstehen, dass es in Ihrer Verantwortung liegt, sicherzustellen, dass die von Ihnen erstellte Richtlinie vollständig und genau ist und Ihren und den spezifischen Anforderungen Ihres Unternehmens entspricht. Wir übernehmen keine Haftung oder Verantwortung für Richtlinien, die mit unseren Diensten erstellt wurden, und geben keine ausdrücklichen oder stillschweigenden Zusicherungen oder Garantien dafür ab, dass die Richtlinien, die mit unseren Diensten erstellt wurden, vollständig, genau oder frei von Fehlern oder Auslassungen sind.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Haftungsbeschränkung&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Der Betreiber ist kein Anwalt oder eine Anwaltskanzlei und übt keine Rechtspraxis aus oder bietet keine Rechtsberatung oder rechtliche Vertretung an. Alle auf der Website bereitgestellten Informationen, Produkte und Dienstleistungen dienen ausschließlich Informationszwecken und der Selbsthilfe und sind kein Ersatz für professionelle Rechtsberatung.&lt;/p&gt;
+&lt;p&gt;In keinem Fall haften der Betreiber oder seine Lieferanten oder Lizenzgeber in Bezug auf einen Vertragsgegenstand, eine Fahrlässigkeit, eine verschuldensunabhängige Haftung oder eine andere rechtliche oder gerechte Theorie für: (i) besondere, zufällige Ereignisse oder Folgeschäden; (ii) die Kosten für die Beschaffung oder den Ersatz von Produkten oder Dienstleistungen; (iii) für die Unterbrechung der Nutzung oder den Verlust oder die Beschädigung von Daten; oder (iv) für Beträge, die die Gebühren übersteigen, die Sie gemäß dieser Vereinbarung an den Betreiber gezahlt haben. Der Betreiber haftet nicht für Ausfälle oder Verzögerungen aufgrund von Angelegenheiten, die außerhalb seines Einflussbereichs liegen. Das Vorstehende gilt nicht, soweit dies gesetzlich verboten ist. Der Betreiber haftet nicht für spezielle Schäden oder Folgeschäden, die sich aus der Nutzung oder der Unfähigkeit zur Nutzung der auf dieser Website angebotenen Dienste und Produkte oder der Leistung der Dienste und Produkte ergeben.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Allgemeine Darstellung und Garantie&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sie versichern und garantieren, dass (i) Ihre Nutzung der Website in strikter Übereinstimmung mit dieser Vereinbarung und mit allen anwendbaren Gesetzen und Bestimmungen (einschließlich, jedoch nicht beschränkt auf lokale Gesetze oder Bestimmungen in Ihrem Land, Bundesstaat, Ihrer Stadt oder anderen Ländern) erfolgt In Bezug auf Online-Verhalten und akzeptablen Inhalt, einschließlich aller anwendbaren Gesetze zur Übermittlung von technischen Daten, die aus dem Land exportiert werden, in dem Sie Ihren Wohnsitz haben, und (ii) Ihre Nutzung der Website wird die geistigen Eigentumsrechte von niemandem verletzen oder missbilligen Drittanbieter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Entschädigung&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sie verpflichten sich, den Betreiber, seine Auftragnehmer und seine Lizenzgeber sowie deren jeweilige Direktoren, leitende Angestellte, Mitarbeiter und Vertreter von sämtlichen Ansprüchen und Aufwendungen, einschließlich Anwaltsgebühren, die sich aus Ihrer Nutzung ergeben, freizustellen und schadlos zu halten der Website, einschließlich, aber nicht beschränkt auf Ihre Verletzung dieser Vereinbarung.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verschiedenes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Diese Vereinbarung stellt die gesamte Vereinbarung zwischen dem Betreiber und Ihnen in Bezug auf den Gegenstand dieser Vereinbarung dar und kann nur durch eine schriftliche Änderung, die von einem autorisierten Manager des Betreibers unterzeichnet wurde, oder durch die Veröffentlichung einer überarbeiteten Version durch den Betreiber geändert werden . Sofern das anwendbare Recht nichts anderes vorsieht, unterliegt dieser Vertrag für den Zugriff auf oder die Nutzung der Website den Gesetzen Belgiens unter Ausschluss seiner Bestimmungen zu Kollisionsnormen und dem geeigneten Gerichtsstand für etwaige Streitigkeiten von oder im Zusammenhang mit einer der gleichen werden die staatlichen und föderalen Gerichte in Belgien sein. Sollte ein Teil dieser Vereinbarung ungültig oder undurchsetzbar sein, wird dieser Teil so ausgelegt, dass er die ursprüngliche Absicht der Parteien widerspiegelt, und die verbleibenden Teile bleiben in vollem Umfang in Kraft und wirksam. Ein Verzicht einer Partei auf eine Klausel oder Bedingung dieses Vertrags oder ein Verstoß gegen diese Klausel oder Bedingung oder ein späterer Verstoß gegen diese Klausel oder Bedingung wird nicht abbedungen. Sie können Ihre Rechte aus dieser Vereinbarung an jede Partei abtreten, die ihren Bedingungen zustimmt und sich an diese gebunden erklärt. Der Betreiber kann seine Rechte aus dieser Vereinbarung bedingungslos abtreten. Diese Vereinbarung ist für die Parteien, ihre Nachfolger und zugelassenen Beauftragten verbindlich und kommt diesen zugute.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Änderungen an unseren Nutzungsbedingungen und Datenschutzbestimmungen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Von Zeit zu Zeit können wir Änderungen an dieser Richtlinie vornehmen. Änderungen werden nach unserem alleinigen Ermessen vorgenommen. Die Benutzer der Site werden aufgefordert, diese Richtlinie auf solche Änderungen zu überprüfen. Wenn Sie diese Website nach Änderungen dieser Richtlinie weiterhin nutzen, stimmen Sie den Änderungen zu.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Kontaktieren Sie uns&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bei Fragen zu diesen Nutzungsbedingungen und Datenschutzbestimmungen wenden Sie sich bitte über unser Kontaktformular an uns.&lt;/p&gt;
+&lt;p&gt;Dieses Dokument wurde zuletzt am 31. Juli 2019 geändert.&lt;/p&gt;</value>
+  </data>
+  <data name="Privacy Policy" xml:space="preserve">
+    <value>Datenschutz-Bestimmungen</value>
+  </data>
+</root>

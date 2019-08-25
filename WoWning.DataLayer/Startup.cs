@@ -20,7 +20,7 @@ namespace WoWning
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlite("Data Source=../WoWning/localdatabase.db"));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer("Data Source=metalmarketplace.database.windows.net;Initial Catalog=MetalMarketPlace;User ID=Kookpot;Password=WoWFFXIV1?;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

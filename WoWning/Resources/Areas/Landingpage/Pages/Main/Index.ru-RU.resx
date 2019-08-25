@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Home Page" xml:space="preserve">
+    <value>Домашняя страница</value>
+  </data>
+  <data name="Idea" xml:space="preserve">
+    <value>Идея</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>&lt;p&gt;Во время перезапуска WoW Classic многие люди будут нуждаться в снаряжении, зельях, чарах, еде, ...&lt;/p&gt;&lt;p&gt;Многие из этих вещей будут доступны в AH, но есть несколько недостатков.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Цены на предметы в AH иногда возмутительны по сравнению с фактическими материалами, необходимыми для изготовления предмета&lt;/li&gt;&lt;li&gt;Предмет, который вам крайне необходим, может отсутствовать в списке AH&lt;/li&gt;&lt;li&gt;У вас могут быть материалы, необходимые для нужного вам предмета, но вы хотите избежать хлопот, связанных с продажей этих материалов, чтобы получить деньги на покупку нужного вам предмета&lt;/li&gt;&lt;li&gt;Веллумс не существует, так что феерию все еще нужно делать, торгуя вручную&lt;/li&gt;&lt;li&gt;Цены на AH могут быть очень нестабильными, и не все игроки используют AH с наилучшими намерениями&lt;/li&gt;&lt;li&gt;Ничто не сравнится с личным взаимодействием ручной торговли&lt;/li&gt;&lt;li&gt;...&lt;/ li&gt;&lt;/ul&gt;&lt;p&gt;Итак, мы предлагаем систему, где люди рекламируют все рецепты вместе с советами, которые они ожидают при разработке рецепта для кого-то.&lt;/p&gt;&lt;p&gt;С помощью простого поиска вы можете увидеть, какие персонажи имеют определенный рецепт на вашем сервере, и связаться с игроком в игре. Это так просто.&lt;/p&gt;&lt;h4&gt;Вещи, которые мы не делаем&lt;/h4&gt;&lt;p&gt;Мы не будем использовать ваши данные для передачи какой-либо внешней службе или стороне. Ваши данные защищены в наших собственных стенах.&lt;/p&gt;&lt;p&gt; Введенные вами данные будут использоваться другими пользователями только при отображении отдельных рецептов! Мы не раскрываем сразу все ваши рецепты другому пользователю.&lt;/p&gt;&lt;p&gt;Мы просто позволяем вам идентифицировать других игроков на вашем сервере. Фактический контакт, переговоры и фактическая транзакция - ваша ответственность.&lt;/p&gt;&lt;p&gt;Если какая-либо транзакция пойдет не так, мы не можем нести ответственность за это на WoWning.com. Вы всегда можете дать этому игроку большие пальцы вниз.&lt;/p&gt;&lt;h4&gt;Как это работает?&lt;/h4&gt;&lt;p&gt;Прежде всего, создайте учетную запись, зарегистрировавшись (пожалуйста, используйте пароль, отличный от вашего WoW-пароля!) или войдите в систему через Facebook, Twitter, Google или Microsoft.&lt;/p&gt;&lt;p&gt;После входа в систему вы можете создавать персонажей, перейдя в меню «Персонажи» и нажав «Создать нового». Некоторые уникальные данные необходимы для однозначной идентификации вашего персонажа (ов).&lt;/p&gt;&lt;p&gt;Для каждого персонажа вы можете добавить известные рецепты в меню «Рецепты». Просто выберите персонажа и одну из его профессий, чтобы загрузить список всех возможных рецептов.&lt;/p&gt;&lt;p&gt;Просто выберите рецепт, введите ожидаемый совет и нажмите «Сохранить», чтобы начать рекламировать свой рецепт другим игрокам.&lt;/p&gt;&lt;p&gt;Чтобы найти рецепт от других игроков на вашем сервере, перейдите в меню «Поиск», выберите сервер и сторону и начните вводить нужный рецепт.&lt;/p&gt;&lt;p&gt;При поиске будет показан список игроков, которым принадлежит рецепт. Также отображаются имена альтов для этого игрока на этом сервере, так что вы можете попытаться связаться с игроком более легко.&lt;/p&gt;&lt;p&gt;Была ли сделка успешной? Дайте игроку палец вверх! Только бросайте большие пальцы, когда другой игрок пытался вас обмануть.&lt;/p&gt;&lt;p&gt;Вы можете рекомендовать или не любить другого игрока раз в неделю!&lt;/p&gt;&lt;h4&gt;Вопросы?&lt;/h4&gt;&lt;p&gt;Любые вопросы, ошибки или идеи могут быть опубликованы через наш &lt;a style="color: #007bff;" href="./Landingpage/Main/Contact"&gt;контактная форма&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>желанный</value>
+  </data>
+</root>

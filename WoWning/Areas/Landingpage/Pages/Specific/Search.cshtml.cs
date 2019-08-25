@@ -21,6 +21,22 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
 
         public PaginatedList<CharacterRecipe> Recipes { get; set; }
 
+        public string WoWHeadDomain
+        {
+            get
+            {
+                var t = System.Threading.Thread.CurrentThread.CurrentCulture;
+                if (t.Name == "fr-FR")
+                    return "fr.classic";
+                else if (t.Name == "ru-RU")
+                    return "ru.classic";
+                else if (t.Name == "de-DE")
+                    return "de.classic";
+                else
+                    return "classic";
+            }
+        }
+
         private readonly DatabaseContext _context;
         private readonly UserManager<WoWUser> _userManager;
         private readonly IHtmlLocalizer<SearchModel> _localizer;
@@ -35,12 +51,43 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
         public async Task<JsonResult> OnGetRecipeListAsync(string text = null)
         {
             text = text.ToLower().Trim();
-            var str = await _context
-                .Recipes.Where(x => x.Name.ToLower().StartsWith(text))
-                .Select(x => x.Name)
-                .ToListAsync();
+            var t = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (t.Name == "fr-FR")
+            {
+                var str = await _context
+                    .Recipes.Where(x => x.FrenchName.ToLower().StartsWith(text))
+                    .Select(x => x.FrenchName)
+                    .ToListAsync();
 
-            return new JsonResult(str);
+                return new JsonResult(str);
+            }
+            else if (t.Name == "ru-RU")
+            {
+                var str = await _context
+                    .Recipes.Where(x => x.RussianName.ToLower().StartsWith(text))
+                    .Select(x => x.RussianName)
+                    .ToListAsync();
+
+                return new JsonResult(str);
+            }
+            else if (t.Name == "de-DE")
+            {
+                var str = await _context
+                    .Recipes.Where(x => x.GermanName.ToLower().StartsWith(text))
+                    .Select(x => x.GermanName)
+                    .ToListAsync();
+
+                return new JsonResult(str);
+            }
+            else
+            {
+                var str = await _context
+                    .Recipes.Where(x => x.Name.ToLower().StartsWith(text))
+                    .Select(x => x.Name)
+                    .ToListAsync();
+
+                return new JsonResult(str);
+            }         
         }
 
         public IActionResult OnGet()
@@ -76,17 +123,42 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
 
             var user = await _userManager.GetUserAsync(User);
 
-            Recipe = _context.Recipes
-                .AsNoTracking()
-                .Include(x => x.RecipeMaterials)
-                .FirstOrDefault(x => x.Name == SearchItem.Name);
+            var t = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (t.Name == "fr-FR")
+            {
+                Recipe = _context.Recipes
+                    .AsNoTracking()
+                    .Include(x => x.RecipeMaterials)
+                    .FirstOrDefault(x => x.FrenchName == SearchItem.Name);
+            }
+            else if (t.Name == "ru-RU")
+            {
+                Recipe = _context.Recipes
+                    .AsNoTracking()
+                    .Include(x => x.RecipeMaterials)
+                    .FirstOrDefault(x => x.RussianName == SearchItem.Name);
+            }
+            else if (t.Name == "de-DE")
+            {
+                Recipe = _context.Recipes
+                    .AsNoTracking()
+                    .Include(x => x.RecipeMaterials)
+                    .FirstOrDefault(x => x.GermanName == SearchItem.Name);
+            }
+            else
+            {
+                Recipe = _context.Recipes
+                    .AsNoTracking()
+                    .Include(x => x.RecipeMaterials)
+                    .FirstOrDefault(x => x.Name == SearchItem.Name);
+            }
 
             var recipesQuery = _context.CharacterRecipes
                 .AsNoTracking()
                 .Include(x => x.Character)
                 .ThenInclude(x => x.User)
                 .ThenInclude(x => x.Characters)
-                .Where(x => x.Recipe.Name == SearchItem.Name && x.Character.Server == SearchItem.Server && x.Character.Side == SearchItem.Side && x.Character.UserId != user.Id);
+                .Where(x => x.Recipe.Id == Recipe.Id && x.Character.Server == SearchItem.Server && x.Character.Side == SearchItem.Side && x.Character.UserId != user.Id);
 
             if (SearchItem.TipSort != SearchItem.CurrentSort)
             {

@@ -123,9 +123,6 @@
   <data name="Associate your" xml:space="preserve">
     <value>Associeer je</value>
   </data>
-  <data name="Company name" xml:space="preserve">
-    <value>Bedrijfsnaam</value>
-  </data>
   <data name="Email" xml:space="preserve">
     <value>Email adres</value>
   </data>
@@ -134,9 +131,6 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Registreer</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
   <data name="You've successfully authenticated with" xml:space="preserve">
     <value>Je bent succesvol geauthenticeerd met</value>
