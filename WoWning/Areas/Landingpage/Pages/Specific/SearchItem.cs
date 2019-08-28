@@ -81,6 +81,8 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
                         return "Venoxis";
                     case 30:
                         return "Whitemane";
+                    case 31:
+                        return "Zandalar Tribe";
                     case 32:
                         return "Flamelash";
                     case 33:
@@ -99,6 +101,36 @@ namespace WoWning.Areas.Landingpage.Pages.Specific
                         return "Bigglesworth";
                     case 40:
                         return "Incendius";
+                    case 41:
+                        return "Ashkandi";
+                    case 42:
+                        return "Kirtonos";
+                    case 43:
+                        return "Kurinaxx";
+                    case 44:
+                        return "Kromcrush";
+                    case 45:
+                        return "Rattlegore";
+                    case 46:
+                        return "Smolderweb";
+                    case 47:
+                        return "Sulfuras";
+                    case 48:
+                        return "Firemaw";
+                    case 49:
+                        return "Noggenfogger";
+                    case 50:
+                        return "Stonespine";
+                    case 51:
+                        return "Amnennar";
+                    case 52:
+                        return "Змейталак";
+                    case 53:
+                        return "Felstriker";
+                    case 54:
+                        return "Yojamba";
+                    case 55:
+                        return "Deviant Delight";
                     default:
                         return "Zandalar Tribe";
                 }

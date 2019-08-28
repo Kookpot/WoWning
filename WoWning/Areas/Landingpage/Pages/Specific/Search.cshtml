@@ -17,17 +17,22 @@
                 <label asp-for="SearchItem.Server" class="control-label"></label>
                 <select asp-for="SearchItem.Server" class="form-control">
                     <option disabled selected>@Localizer["Select an option"]</option>
+                    <option value="51">Amnennar</option>
                     <option value="1">Arugal</option>
+                    <option value="41">Ashkandi</option>
                     <option value="2">Atiesh</option>
                     <option value="3">Auberdine</option>
                     <option value="39">Bigglesworth</option>
                     <option value="4">Blaumeux</option>
                     <option value="5">Bloodsail Buccaneers</option>
-                    <option value="6">ХРОМИ (Chromie)</option>
+                    <option value="6">Хроми (Chromie)</option>
+                    <option value="55">Deviant Delight</option>
                     <option value="7">Everlook</option>
                     <option value="8">Faerlina</option>
                     <option value="9">Fairbanks</option>
-                    <option value="10">ПЛАМЕГОР (Flamegor)</option>
+                    <option value="53">Felstriker</option>
+                    <option value="48">Firemaw</option>
+                    <option value="10">Пламегор (Flamegor)</option>
                     <option value="32">Flamelash</option>
                     <option value="33">Gandling</option>
                     <option value="11">Gehennas</option>
@@ -36,27 +41,37 @@
                     <option value="14">Herod</option>
                     <option value="15">Hydraxian Waterlords</option>
                     <option value="40">Incendius</option>
+                    <option value="42">Kirtonos</option>
+                    <option value="43">Kurinaxx</option>
+                    <option value="44">Kromcrush</option>
                     <option value="16">Lucifron</option>
                     <option value="17">Mankrik</option>
                     <option value="18">Mirage Raceway</option>
                     <option value="34">Mograine</option>
                     <option value="19">Myzrael</option>
                     <option value="35">Nethergarde Keep</option>
+                    <option value="49">Noggenfogger</option>
                     <option value="37">Old Blanchy</option>
                     <option value="20">Pagle</option>
                     <option value="21">Pyrewood Village</option>
+                    <option value="45">Rattlegore</option>
                     <option value="22">Razorfen</option>
                     <option value="36">Razorgore</option>
                     <option value="23">Remulos</option>
                     <option value="24">Shazzrah</option>
                     <option value="25">Skeram</option>
+                    <option value="46">Smolderweb</option>
                     <option value="26">Stalagg</option>
+                    <option value="50">Stonespine</option>
+                    <option value="47">Sulfuras</option>
                     <option value="27">Sulfuron</option>
                     <option value="28">Thalnos</option>
                     <option value="29">Venoxis</option>
                     <option value="38">Westfall</option>
                     <option value="30">Whitemane</option>
+                    <option value="54">Yojamba</option>
                     <option value="31">Zandalar Tribe</option>
+                    <option value="52">Змейталак (Wyrmthalak)</option>
                 </select>
                 <span asp-validation-for="SearchItem.Server" class="text-danger"></span>
             </div>
@@ -93,11 +108,13 @@
     <div>
         @if (Model.Recipe.ItemId == Model.Recipe.Id)
         {
-            <a href="#" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="spell=@Model.Recipe.ItemId&amp;domain=@Model.WoWHeadDomain"></a>
+            var m = "https://" + Model.WoWHeadDomain + ".wowhead.com/item=" + Model.Recipe.ItemId;
+            <a href="@m" target="_blank" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="item=@Model.Recipe.ItemId&amp;domain=@Model.WoWHeadDomain"></a>
         }
         else
         {
-            <a href="#" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="item=@Model.Recipe.ItemId&amp;domain=@Model.WoWHeadDomain"></a>
+            var m = "https://" + Model.WoWHeadDomain + ".wowhead.com/item=" + Model.Recipe.ItemId;
+            <a href="@m" target="_blank" style="color: black !important;" data-wh-icon-size="medium" data-wowhead="item=@Model.Recipe.ItemId&amp;domain=@Model.WoWHeadDomain"></a>
         }
         @if (Model.Recipe.MaxAmount != null)
         {
@@ -113,10 +130,11 @@
     <div>
         @foreach (var mat in Model.Recipe.RecipeMaterials)
         {
-            <div style="padding-right: 2rem">
-                <a href="#" data-wh-icon-size="medium" style="color: black !important;" data-wowhead="item=@mat.MaterialId&amp;domain=@Model.WoWHeadDomain"></a>
-                <p style="position: absolute; color: white !important; width: 40px;text-align: right;margin-top: calc(0px - 1.5rem);pointer-events: none;">@mat.Amount</p>
-            </div>
+            var m = "https://" + Model.WoWHeadDomain + ".wowhead.com/item=" + mat.MaterialId;
+        <div style="padding-right: 2rem">
+            <a href="@m" target="_blank" data-wh-icon-size="medium" style="color: black !important;" data-wowhead="item=@mat.MaterialId&amp;domain=@Model.WoWHeadDomain"></a>
+            <p style="position: absolute; color: white !important; width: 40px;text-align: right;margin-top: calc(0px - 1.5rem);pointer-events: none;">@mat.Amount</p>
+        </div>
         }
     </div>
     <br />

@@ -48,7 +48,7 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th class="col-md" style="max-width:30%">@Localizer["Expected Tip"]</th>
+                    <th>@Localizer["Expected Tip"]</th>
                     <th>
                         <a asp-route-character="@Model.Character" asp-route-profession="@Model.Profession" asp-route-sortOrder="@Model.NameSort" asp-route-currentFilter="@Model.CurrentFilter">
                             @Html.DisplayNameFor(model => model.Recipes[0].Name)
@@ -64,21 +64,22 @@
             <tbody>
                 @for (var i = 0; i < Model.Recipes.Count(); i++)
                 {
+                    var m = "https://" + Model.WoWHeadDomain + ".wowhead.com/spell=" + Model.Recipes[i].Id;
                 <tr>
                     <td>
                         <input type="hidden" asp-for="Recipes[i].Id" />
                         <input asp-for="Recipes[i].IsSelected" />
                     </td>
-                    <td class="col-md" style="max-width:30%">
-                        <input asp-for="Recipes[i].Gold" min="0" class="col-md-3" style="padding-left:10px;padding-right: 10px"/>
+                    <td>
+                        <input asp-for="Recipes[i].Gold" min="0" class="col-md-3" style="max-width: 65px;padding-left:10px;padding-right: 10px;text-align: right;"/>
                         <img src="~/img/gold.png" />
-                        <input asp-for="Recipes[i].Copper" max="99" min="0" class="col-md-3" style="padding-left:10px;padding-right: 10px"/>
+                        <input asp-for="Recipes[i].Copper" max="99" min="0" class="col-md-3" style="max-width: 65px;padding-left:10px;padding-right: 10px;text-align: right;"/>
                         <img src="~/img/silver.png" />
-                        <input asp-for="Recipes[i].Silver" max="99" min="0" class="col-md-3" style="padding-left:10px;padding-right: 10px"/>
+                        <input asp-for="Recipes[i].Silver" max="99" min="0" class="col-md-3" style="max-width: 65px;padding-left:10px;padding-right: 10px;text-align: right;"/>
                         <img src="~/img/copper.png" />
                     </td>
                     <td>
-                        <a href="#" data-wowhead="spell=@Model.Recipes[i].Id&amp;domain=@Model.WoWHeadDomain">@Model.Recipes[i].TransName</a>
+                        <a href="@m" target="_blank" data-wh-icon-size="small" data-wowhead="spell=@Model.Recipes[i].Id&amp;domain=@Model.WoWHeadDomain">@Model.Recipes[i].TransName</a>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => Model.Recipes[i].Level)
